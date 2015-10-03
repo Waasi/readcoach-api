@@ -40,7 +40,8 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
 end
 
 group :development do
