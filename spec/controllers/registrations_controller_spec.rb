@@ -15,7 +15,7 @@ RSpec.describe RegistrationsController do
       end
 
       it 'creates a new user' do
-        expect(result['email']).to eq 'test@test.com'
+        expect(result['email']).to eq eric[:email]
       end
 
       it 'has an auth token' do
@@ -25,22 +25,6 @@ RSpec.describe RegistrationsController do
       it 'signs the user up' do
         expect(User.valid_session_token? result['token']).to eq true
       end
-    end
-
-    describe 'GET#show' do
-
-    end
-
-    describe 'PUT#update' do
-
-    end
-
-    describe 'PATCH#update' do
-
-    end
-
-    describe 'DELETE#destroy' do
-
     end
   end
 end

@@ -18,15 +18,6 @@ class SessionsController < Devise::SessionsController
     end
   end
 
-  def show
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   private
 
   def sign_in_params

@@ -22,6 +22,7 @@
 #
 
 require 'factory_girl'
+require 'faker'
 
 FactoryGirl.define do
   factory :user do
@@ -30,7 +31,7 @@ FactoryGirl.define do
       password "password"
     end
     name "Eric Santos"
-    email "test@test.com"
+    email Faker::Internet.email
     password "password"
     password_confirmation "password"
     age 23
