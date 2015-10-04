@@ -127,7 +127,7 @@ All request must include:
 
 ### Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/yahoo_finanza/fork )
+1. Fork it ( https://github.com/[my-github-username]/readcoach-api/fork )
 2. Create your feature branch (`git checkout -b feature/my_new_feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
