@@ -43,6 +43,13 @@ rspec
 
 ## Access to the ReadCoach API
 
+http://readcoach.herokuapp.com
+
+All request must include:
+
+- Content-Type: application/json
+- Accept: application/json
+
 ## Endpoints
 
 ##### Sign In
