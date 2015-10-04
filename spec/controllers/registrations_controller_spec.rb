@@ -10,6 +10,7 @@ RSpec.describe RegistrationsController do
       let(:result) { res = JSON.parse(json.body) }
 
       before :each do
+        request.env["HTTP_ACCEPT"] = 'application/json'
         request.env['devise.mapping'] = Devise.mappings[:user]
       end
 
