@@ -2,8 +2,8 @@ require 'rest-client'
 
 class CoachController < ApplicationController
   def training_session
-    token = User.get_session_token(params[:email])
-    if token && token == params[:token]
+    token = User.get_session_token(coach[:email])
+    if token && token == coach[:token]
       render json: { training: training_words(10) }, status: :ok
     else
       render json: { error: 'Unauthorized' }, status: :unauthorized
@@ -11,8 +11,8 @@ class CoachController < ApplicationController
   end
 
   def test_session
-    token = User.get_session_token(params[:email])
-    if token && token == params[:token]
+    token = User.get_session_token(coach[:email])
+    if token && token == coach[:token]
       render json: { test: test_words(30) }, status: :ok
     else
       render json: { error: 'Unauthorized' }, status: :unauthorized
@@ -21,10 +21,9 @@ class CoachController < ApplicationController
 
   def test_results
     token = User.get_session_token(results[:email])
-    if token && token == params[:token]
+    if token && token == results[:token]
       user = User.find_by(email: results[:email])
       evaluation = user.evaluations.new(words_read: results[:words_read])
-      binding.pry
       if evaluation.valid?
         render json: user.to_json(include: :evaluations), status: :ok
       else
@@ -36,9 +35,9 @@ class CoachController < ApplicationController
   end
 
   private
-  # def coach_params
-  #   params.permit(:email, :token, :coach)
-  # end
+  def coach
+    params.permit(:email, :token)
+  end
 
   def results
     params.permit(:email, :token, :words_read)
