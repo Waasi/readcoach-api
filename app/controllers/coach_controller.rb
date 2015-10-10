@@ -108,7 +108,7 @@ class CoachController < ApplicationController
   end
 
   def phrases count
-    File.read(File.join(Rails.root, 'app', 'assets', 'dictionaries', 'dictionary2'))
+    File.read(File.join(Rails.root, 'app', 'assets', 'dictionaries', "dictionary2-#{user_locale}"))
     .split("\n").shuffle[0...count]
   end
 end

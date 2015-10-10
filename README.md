@@ -102,6 +102,8 @@ All request must include:
 
 - Response: ```{ training: [ phrase_here, phrase_here, ....] }```
 
+** Response will be in the selected language
+
 ##### Advanced Test
 - Method: ```GET```
 
@@ -110,6 +112,8 @@ All request must include:
 - Parameters: ```{ email: email_here, token: token_here }```
 
 - Response: ```{ test: [ phrase_here, phrase_here, ....] }```
+
+** Response will be in the selected language
 
 ##### Test Results
 - Method: ```POST```
