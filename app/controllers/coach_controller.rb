@@ -2,6 +2,7 @@ require 'rest-client'
 
 class CoachController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: :test_results
+  before_action :set_locale, except: :create
 
   def training_session
     token = User.get_session_token(coach[:email])
@@ -66,6 +67,16 @@ class CoachController < ApplicationController
   end
 
   private
+
+  def set_locale
+    I18n.locale = user_locale || I18n.default_locale
+  end
+
+  def user_locale
+    user = User.find_by(email: params[:email])
+    user.language if user
+  end
+
   def coach
     params.permit(:email, :token)
   end
@@ -81,12 +92,12 @@ class CoachController < ApplicationController
   def training_words count
     words = File.read(File.join(Rails.root, 'app', 'assets', 'dictionaries', 'dictionary1'))
     .split("\n").shuffle[0...count]
-    words.map { |word| { word: word, image: get_image(word) } }
+    words.map { |word| { word: I18n.t(word), image: get_image(word) } }
   end
 
   def test_words count
     File.read(File.join(Rails.root, 'app', 'assets', 'dictionaries', 'dictionary1'))
-    .split("\n").shuffle[0...count]
+    .split("\n").map { |word| I18n.t(word) }.shuffle[0...count]
   end
 
   def get_image word

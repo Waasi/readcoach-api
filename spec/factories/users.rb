@@ -35,6 +35,6 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
     age 23
-    language "spanish"
+    language "es"
   end
 end
