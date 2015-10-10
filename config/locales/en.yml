@@ -1,23 +1,51 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  circle: "circle"
+  leaf: "leaf"
+  tree: "tree"
+  apple: "apple"
+  father: "father"
+  mother: "mother"
+  potato: "potato"
+  mirror: "mirror"
+  car: "car"
+  house: "house"
+  rabbit: "rabbit"
+  horse: "horse"
+  floor: "floor"
+  roof: "roof"
+  space: "space"
+  star: "star"
+  cloud: "cloud"
+  rain: "rain"
+  water: "water"
+  light: "light"
+  dog: "dog"
+  cat: "cat"
+  lighting: "lighting"
+  shirt: "shirt"
+  hat: "hat"
+  shoe: "shoe"
+  beach: "beach"
+  sun: "sun"
+  moon: "moon"
+  rice: "rice"
+  bottle: "bottle"
+  pencil: "pencil"
+  food: "food"
+  bed: "bed"
+  room: "room"
+  phone: "phone"
+  insect: "insect"
+  fish: "fish"
+  elephant: "elephant"
+  lion: "lion"
+  monkey: "monkey"
+  nose: "nose"
+  face: "face"
+  ear: "ear"
+  fruits: "fruits"
+  hair: "hair"
+  book: "book"
+  bird: "bird"
+  chair: "chair"
+  pillow: "pillow"

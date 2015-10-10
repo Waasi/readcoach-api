@@ -4,7 +4,8 @@
 This is an API created to serve data to ReadCoach Front End EmberJS APP. ReadCoach
 is a web app designed to help people learning to read or people that want to improve
 their reading skills. The user can practice all he/she desires and then put their skills
-to the test and see their improvement over time.
+to the test and see their improvement over time. ReadCoach now supports spanish, english
+and italian.
 
 ### Configuration
 
@@ -79,6 +80,8 @@ All request must include:
 
 - Response: ```{ training: [{ word: word_here, image: image_url_here }, ....] }```
 
+** Response will be in the selected language
+
 ##### Test
 - Method: ```GET```
 
@@ -87,6 +90,8 @@ All request must include:
 - Parameters: ```{ email: email_here, token: token_here }```
 
 - Response: ```{ test: [ word_here, word_here, ....] }```
+
+** Response will be in the selected language
 
 ##### Advanced Training
 - Method: ```GET```
@@ -97,6 +102,8 @@ All request must include:
 
 - Response: ```{ training: [ phrase_here, phrase_here, ....] }```
 
+** Response will be in the selected language
+
 ##### Advanced Test
 - Method: ```GET```
 
@@ -105,6 +112,8 @@ All request must include:
 - Parameters: ```{ email: email_here, token: token_here }```
 
 - Response: ```{ test: [ phrase_here, phrase_here, ....] }```
+
+** Response will be in the selected language
 
 ##### Test Results
 - Method: ```POST```
